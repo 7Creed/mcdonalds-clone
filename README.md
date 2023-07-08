@@ -1,0 +1,1 @@
+This is a mcdonalds clone web app done with Next.js and Tailwind
