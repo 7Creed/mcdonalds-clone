@@ -1,4 +1,4 @@
-import React from "react";
+// import FooterBottomI from "./FooterBottomI";
 import FooterBottomI from "./FooterBottomI";
 import FooterBottomII from "./FooterBottomII";
 
