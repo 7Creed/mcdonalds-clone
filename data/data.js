@@ -47,7 +47,7 @@ export const arrayObj = [
     id: 5,
     image: "/img/image_5.jpg",
     title: "Deals for Days",
-    para_one: "Get exclusive deals on your McDonald’s favorites in the app with contactless Mobile Order &amp; Pay* and convenient Drive Thru or Curbside pickup.",
+    para_one: `Get exclusive deals on your McDonald’s favorites in the app with contactless Mobile Order &amp; Pay* and convenient Drive Thru or Curbside pickup.`,
     para_three: "Mobile Order & pay at participating McDonald's.",
     button_text: "Get App Deals",
     path: "#",

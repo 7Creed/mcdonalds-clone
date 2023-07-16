@@ -19,7 +19,7 @@ export default function FooterBottomII() {
           </ul>
         </ul> */}
 
-        <div className="lg:flex justify-center text-[0.83rem] p-5 w-[100%] space-y-5">
+        <div className="lg:flex justify-center text-[0.83rem] py-3 px-5 w-[100%] space-y-5">
           <div className="left flex flex-wrap justify-center gap-5 lg:justify-start lg:w-[65%]">
             <div className="block w-full lg:w-auto">Privacy (Updated)</div>
             <div>California Privacy Notice</div>

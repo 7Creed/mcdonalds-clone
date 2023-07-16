@@ -151,7 +151,7 @@ const Header = () => {
               <div className="orderNow">
                 <a
                   href="#"
-                  className="bg-[#ffbc0d] text-[#292929] text-sm py-2 px-4 rounded-[0.3rem] flex-end"
+                  className="bg-[#ffbc0d] text-[#292929] text-sm py-2 px-4 rounded-[0.3rem] flex-end flex shrink-0"
                 >
                   Order Now
                 </a>

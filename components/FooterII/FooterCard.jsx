@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
-function FooterCard({ acordionTitle, items }) {
+function FooterCard({ acordionTitle, items, index }) {
   const [expand, setExpand] = useState(false);
   const [winWidth, setWinWidth] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
 
   useEffect(() => {
     const handleWindowSize = () => {
@@ -25,12 +26,16 @@ function FooterCard({ acordionTitle, items }) {
       setExpand(false)
     }
   },[winWidth] )
+  console.log(activeIndex === index, activeIndex, index)
 
   return (
     <div className="space-y-4 lg:w-[16.6%]">
       <div
         className={`top flex justify-between text-lg ${winWidth >= 1024 ? '' : 'cursor-pointer'}`}
-        onClick={winWidth >=1024 ? null : () => setExpand(!expand)}
+        onClick={winWidth >=1024 ? null : () => {
+          setExpand(!expand),
+          setActiveIndex(index)
+        }}
       >
         <h2 className="font-semibold lg:font-bold">{acordionTitle}</h2>
         <div className="lg:hidden text-2xl">
@@ -38,13 +43,13 @@ function FooterCard({ acordionTitle, items }) {
         </div>
       </div>
 
-      {expand ? (
+      {expand && activeIndex === index && (
         <div className="space-y-4 pb-4 lg:space-y-2">
           {items.map((item, idx) => (
             <p key={idx}>{item}</p>
           ))}
         </div>
-      ) : null}
+      )}
     </div>
   );
 }

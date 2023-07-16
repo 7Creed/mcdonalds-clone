@@ -1,10 +1,7 @@
 import React from "react";
-
-import Link from "next/link";
 import FooterBottomI from "./FooterBottomI";
 import FooterBottomII from "./FooterBottomII";
 
-// import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 // export const icon = [
 //   <BiLogoFacebook />,
 //   <BiLogoTwitter />,
@@ -19,7 +16,7 @@ const img2 = "/img/google_play_badge.png";
 
 function FooterBottom() {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center space-y-7 divide-y lg:pb-16">
       <FooterBottomI img1={img1} img2={img2} />
       <FooterBottomII />
     </div>
