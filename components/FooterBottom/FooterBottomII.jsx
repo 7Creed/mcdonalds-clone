@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/no-unescaped-entities */
+import Image from "next/image";
 
 const logo = "/img/logo.jpg";
 export default function FooterBottomII() {
@@ -23,15 +24,15 @@ export default function FooterBottomII() {
           <div className="left flex flex-wrap justify-center gap-5 lg:justify-start lg:w-[65%]">
             <div className="block w-full lg:w-auto">Privacy (Updated)</div>
             <div>California Privacy Notice</div>
-            <div>Terms &amp; Conditions</div>
+            <div>Terms & Conditions</div>
             <div>Accessibility</div>
             <div>Do Not Sell or Share My Personal Information</div>
             <div>Cookies Settings</div>
           </div>
           <div className="right flex justify-center items-start lg:justify-end lg:w-[35%]">
-            <img src={logo} alt="logo" className="w-8 inline-bloc" />
+            <Image src={logo} width="20" height="20" alt="logo" className="w-8 inline-bloc" />
             <div className="lg:text-right">
-              © 2017 - 2023&nbsp;McDonald's. All Rights Reserved
+              © 2017 - 2023 McDonald's. All Rights Reserved
             </div>
           </div>
         </div>

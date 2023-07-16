@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { FaMapMarkerAlt } from "react-icons/fa";
