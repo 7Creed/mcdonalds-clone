@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   BiLogoFacebook,
   BiLogoTwitter,
@@ -12,12 +13,24 @@ import {
 // import { icon } from "./FooterBottom";
 
 const icon = [
-  <BiLogoFacebook />,
-  <BiLogoTwitter />,
-  <BiLogoYoutube />,
-  <BiLogoInstagramAlt />,
-  <BiLogoTumblr />,
-  <BiLogoSpotify />,
+  {
+    icon: <BiLogoFacebook />,
+  },
+  {
+    icon: <BiLogoTwitter />,
+  },
+  {
+    icon: <BiLogoYoutube />,
+  },
+  {
+    icon: <BiLogoInstagramAlt />,
+  },
+  {
+    icon: <BiLogoTumblr />,
+  },
+  {
+    icon: <BiLogoSpotify />,
+  },
 ];
 // console.log(icon);
 
@@ -28,17 +41,17 @@ function FooterBottomI({ img1, img2 }) {
         {icon.map((entry, idx) => {
           return (
             <div key={idx} className="p-2 border rounded-full">
-              {entry}{" "}
+              {entry.icon}{" "}
             </div>
           );
         })}
       </div>
       <div className="flex justify-around lg:justify-end lg:px-5 w-[100%]">
         <Link href="/" className="">
-          <img src={img1} alt="app store download" />
+          <Image src={img1} width="150" height='150' alt="app store download" />
         </Link>
         <Link href="/" className="">
-          <img src={img2} alt="google play download" />
+          <Image src={img2} width="150" height='150' alt="google play download" />
         </Link>
       </div>
     </div>
