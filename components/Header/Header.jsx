@@ -25,6 +25,10 @@ const navI = [
   { id: 3, title: "Careers", link: "/" },
 ];
 
+const handleClick =() => {
+  console.log("click")
+}
+
 const navII = [
   {
     id: 1,
@@ -32,7 +36,7 @@ const navII = [
     icon: <RiArrowDropDownLine className="text-3xl" />,
     link: "/",
   },
-  { id: 2, title: "Download App", link: "/" },
+  { id: 2, title: "Download App", link: "/downloadapp" },
   { id: 3, title: "MyMcDonald's Rewards", link: "/" },
   { id: 4, title: "Exclusive Deals", link: "/" },
   { id: 5, title: "About Our Food", link: "/" },
@@ -89,7 +93,8 @@ const Header = () => {
                       <li>Our Menu</li>
                       <AiOutlinePlus className="text-[1.3rem]" />
                     </div>
-                    <li>Download App</li>
+                    <li onClick={handleClick}><Link href="/downloadapp">Download App </Link></li>
+                    
                     <li>MyMcDonald's Rewards</li>
                     <li>Exclusive Deals</li>
                     <li>About Our Food</li>

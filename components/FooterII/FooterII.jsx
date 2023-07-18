@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import FooterCard from "./FooterCard";
+// import FooterCard from "./FooterCard";
 import { footerData } from "../../data/foot";
-import FooterBottom from "../FooterBottom/FooterBottom";
+import FooterBottom from "../FooterBtm/FooterBottom";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 // const Data = ["school", "market", "church"];
@@ -40,7 +40,7 @@ function FooterII() {
                     : () => {
                         // setExpand(!expand),
                         setActiveIndex(
-                          activeIndex === index ? index + 10 : index
+                          activeIndex === index ? null : index
                         );
                       }
                 }

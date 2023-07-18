@@ -26,7 +26,7 @@ function FooterCard({ acordionTitle, items, index }) {
       setExpand(false)
     }
   },[winWidth] )
-  console.log(activeIndex === index, activeIndex, index)
+  // console.log(activeIndex === index, activeIndex, index)
 
   return (
     <div className="space-y-4 lg:w-[16.6%]">
