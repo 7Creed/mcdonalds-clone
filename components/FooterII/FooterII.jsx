@@ -7,6 +7,7 @@ import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 // const Data = ["school", "market", "church"];
 
 function FooterII() {
+  // const win = window.innerWidth
   // const [expand, setExpand] = useState(false);
   const [winWidth, setWinWidth] = useState(null);
   const [activeIndex, setActiveIndex] = useState(null);
@@ -15,7 +16,14 @@ function FooterII() {
     const handleWindowSize = () => {
       setWinWidth(window.innerWidth);
     };
-    window.addEventListener("resize", handleWindowSize)
+    window.addEventListener("resize", handleWindowSize);
+
+    // console.log(winWidth)
+    if (winWidth === null) {
+      handleWindowSize();
+    }
+
+    // console.log(winWidth)
 
     return () => {
       window.removeEventListener("resize", handleWindowSize);
@@ -39,9 +47,7 @@ function FooterII() {
                     ? null
                     : () => {
                         // setExpand(!expand),
-                        setActiveIndex(
-                          activeIndex === index ? null : index
-                        );
+                        setActiveIndex(activeIndex === index ? null : index);
                       }
                 }
               >
@@ -55,7 +61,7 @@ function FooterII() {
                 </div>
               </div>
 
-              {winWidth <= 1000 ? (
+              {winWidth <= 1024 ? (
                 activeIndex === index && (
                   <div className="space-y-4 pb-4 lg:space-y-2">
                     {items.map((item, idx) => (
